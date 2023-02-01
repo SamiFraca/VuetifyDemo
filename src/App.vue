@@ -1,28 +1,38 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <v-app>
+    <v-main>
+      <Header />
+      <Calendar />
+      <Carousel />
+      <Footer />
+    </v-main>
+  </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import { Calendar, Carousel, Header, Footer } from "./components/index";
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
-</script>
+  name: "App",
 
+  components: {
+    Carousel,
+    Calendar,
+    Header,
+    Footer,
+  },
+
+  data: () => ({
+    items: [
+      { title: "Test" },
+      { title: "Test" },
+      { title: "Test" },
+      { title: "Click Me 2" },
+    ],
+    model: 0,
+    colors: ["primary", "secondary", "yellow darken-2", "red", "orange"],
+  }),
+};
+</script>
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+@import url("https://fonts.googleapis.com/css2?family=Merienda&display=swap");
 </style>
