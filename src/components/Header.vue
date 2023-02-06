@@ -1,40 +1,19 @@
 <template>
-  <v-app-bar app color="primary" dark>
+  <v-app-bar app color="primary" dark class="mb-5">
     <div class="d-flex align-center">
-      <v-img
-        alt="Vuetify Logo"
-        class="shrink mr-2"
-        contain
-        src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
-        transition="scale-transition"
-        width="40"
-      />
-
-      <v-img
-        alt="Vuetify Name"
-        class="shrink mt-1 hidden-sm-and-down"
-        contain
-        min-width="100"
-        src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-        width="100"
-      />
+      <span class="text-xl-h5">WatchMe</span>
     </div>
-
+    <div class="w-50 ml-6 mt-3">
+      <v-autocomplete style></v-autocomplete>
+    </div>
     <v-spacer></v-spacer>
-
-    <v-btn
-      href="https://github.com/vuetifyjs/vuetify/releases/latest"
-      class="mr-5"
-      target="_blank"
-      text
-    >
-      <span class="mr-2">Latest Release</span>
-      <v-icon>mdi-open-in-new</v-icon>
-    </v-btn>
+    <v-avatar color="red" size="45" class="mr-5">
+      <img src="../assets/page.jpg" />
+    </v-avatar>
     <div class="text-center">
-      <v-menu offset-y>
+      <v-menu offset-y transition="scroll-y-transition">
         <template v-slot:activator="{ on, attrs }">
-          <v-btn color="grey darken-2" dark v-bind="attrs" v-on="on">Dropdown</v-btn>
+          <v-btn color="red darken-2" dark v-bind="attrs" v-on="on">Dropdown</v-btn>
         </template>
         <v-list>
           <v-list-item v-for="(item, index) in items" :key="index">
@@ -48,7 +27,24 @@
 
 <script>
 export default {
-  data: () => ({}),
+  data: () => ({
+    items: [
+      { title: "Click Me" },
+      { title: "Click Me" },
+      { title: "Click Me" },
+      { title: "Click Me 2" },
+    ],
+  }),
+  methods: {
+    Dropdown() {
+      for (let i = 0; i < this.items.length; i++) {
+        let openDropdown = this.items[i];
+        if (openDropdown.classList.contains("show")) {
+          openDropdown.classList.remove("show");
+        }
+      }
+    },
+  },
 };
 </script>
 

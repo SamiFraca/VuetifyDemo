@@ -3,19 +3,17 @@
     <v-main>
       <Header />
       <Calendar />
-      <Carousel />
       <Footer />
     </v-main>
   </v-app>
 </template>
 
 <script>
-import { Calendar, Carousel, Header, Footer } from "./components/index";
+import { Calendar, Header, Footer } from "./components/index";
 export default {
   name: "App",
 
   components: {
-    Carousel,
     Calendar,
     Header,
     Footer,

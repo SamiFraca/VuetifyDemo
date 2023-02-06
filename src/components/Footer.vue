@@ -1,7 +1,7 @@
 <template>
   <v-card>
     <v-footer v-bind="localAttrs" :padless="padless">
-      <v-card flat tile width="100%" class="red lighten-1 text-center pa-10">
+      <v-card flat tile width="100%" class="primary text-center pa-10">
         <v-card-text>
           <v-btn v-for="icon in icons" :key="icon" class="mx-4" icon>
             <v-icon size="24px">{{ icon }}</v-icon>
@@ -12,7 +12,7 @@
 
         <v-card-text class="white--text">
           {{ new Date().getFullYear() }} —
-          <strong>Vuetify</strong>
+          <strong>WatchMe</strong>
         </v-card-text>
       </v-card>
     </v-footer>
