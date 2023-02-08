@@ -1,7 +1,7 @@
 <template>
   <v-app-bar app color="primary" dark class="mb-5">
     <div class="d-flex align-center">
-      <span class="text-xl-h5">WatchMe</span>
+      <span class="text-lg-h4 text-xs-h1">WatchMe</span>
     </div>
     <div class="w-50 ml-6 mt-3">
       <v-autocomplete style></v-autocomplete>

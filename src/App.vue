@@ -3,13 +3,14 @@
     <v-main>
       <Header />
       <Calendar />
+      <MobileNavBottom />
       <Footer />
     </v-main>
   </v-app>
 </template>
 
 <script>
-import { Calendar, Header, Footer } from "./components/index";
+import { Calendar, Header, Footer, MobileNavBottom } from "./components/index";
 export default {
   name: "App",
 
@@ -17,6 +18,7 @@ export default {
     Calendar,
     Header,
     Footer,
+    MobileNavBottom,
   },
 
   data: () => ({
