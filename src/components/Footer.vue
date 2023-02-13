@@ -1,5 +1,5 @@
 <template>
-  <v-card class="">
+  <v-card>
     <v-footer v-bind="localAttrs" :padless="padless">
       <v-card flat tile width="100%" class="primary text-center pa-10">
         <v-card-text>
@@ -16,12 +16,12 @@
         </v-card-text>
       </v-card>
     </v-footer>
-
   </v-card>
 </template>
 
 <script>
 export default {
+
   data: () => ({
     icons: ["mdi-home", "mdi-email", "mdi-calendar", "mdi-delete"],
     items: ["default", "absolute", "fixed"],

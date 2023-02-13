@@ -3,6 +3,12 @@
     <v-main>
       <Header />
       <Calendar />
+      <div style="display:flex;">
+        <Card />
+        <Card />
+        <Card />
+      </div>
+      <Carousel />
       <MobileNavBottom />
       <Footer />
     </v-main>
@@ -10,7 +16,16 @@
 </template>
 
 <script>
-import { Calendar, Header, Footer, MobileNavBottom } from "./components/index";
+import {
+  Calendar,
+  Header,
+  Footer,
+  MobileNavBottom,
+  Card,
+  Carousel,
+  HeaderText,
+  HeaderTextWrapper,
+} from "./components/index";
 export default {
   name: "App",
 
@@ -19,6 +34,8 @@ export default {
     Header,
     Footer,
     MobileNavBottom,
+    Card,
+    Carousel,
   },
 
   data: () => ({

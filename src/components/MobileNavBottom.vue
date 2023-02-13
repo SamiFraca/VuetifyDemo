@@ -1,5 +1,12 @@
 <template>
-  <v-bottom-navigation :value="value" color="primary" background-color="whitesmoke" class="d-lg-none d-md-none" grow>
+  <v-bottom-navigation
+    :value="value"
+    color="primary"
+    background-color="whitesmoke"
+    class="d-lg-none d-md-none"
+    grow
+  >
+  <Badge/>
     <v-btn>
       <span>Recents</span>
 
@@ -21,7 +28,9 @@
 </template>
 
 <script>
+import Badge from './Badge'
 export default {
+  components: Badge,
   data: () => ({ value: 1 }),
 };
 </script>

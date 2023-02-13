@@ -14,7 +14,7 @@
 export default {
   data: () => ({
     model: 0,
-    colors: ["primary", "secondary", "yellow darken-2", "red", "orange"],
+    colors: ["green", "secondary", "yellow darken-2", "red", "orange"],
   }),
 };
 </script>
